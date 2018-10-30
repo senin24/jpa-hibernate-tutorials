@@ -30,6 +30,14 @@ public class Comment extends AuditModel {
     @JsonProperty("post_id")
     private Post post;
 
+    public Comment() {
+    }
+
+    public Comment(@NotNull String text, Post post) {
+        this.text = text;
+        this.post = post;
+    }
+
     public Long getId() {
         return id;
     }
